@@ -1,11 +1,11 @@
 package com.example.recuperacion;
 
 public class Cotizacion {
-    private int folio = 0;
-    private String descripcion = "";
-    private float valorAuto = 0;
-    private float porEnganche = 0;
-    private int plazo = 0;
+    private int folio;
+    private String descripcion;
+    private float valorAuto;
+    private float porEnganche;
+    private int plazo;
 
     // Getters y Setters
 
@@ -49,6 +49,14 @@ public class Cotizacion {
         this.plazo = plazo;
     }
 
+    public Cotizacion(){
+        this.folio = 0;
+        this.descripcion = "";
+        this.valorAuto = 0;
+        this.porEnganche = 0;
+        this.plazo = 0;
+    }
+    // Constructor de parametros
     public Cotizacion(int folio, String descripcion, float valorAuto, float porEnganche, int plazo){
         this.folio = folio;
         this.descripcion = descripcion;
@@ -57,6 +65,7 @@ public class Cotizacion {
         this.plazo = plazo;
     }
 
+    // Métodos
     public int generarFolio(){
         return this.folio + 1;
     }
@@ -73,4 +82,3 @@ public class Cotizacion {
         return pagoMensual;
     }
 }
-
